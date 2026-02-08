@@ -1,0 +1,73 @@
+:root {
+  --deposits-card: rgba(25, 25, 34, 0.9);
+  --deposits-border: rgba(255, 255, 255, 0.08);
+  --deposits-text: #f4f5f7;
+  --deposits-muted: #a0a3b1;
+}
+
+.deposits-page {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px 60px;
+  background:
+    radial-gradient(1200px 600px at 15% -10%, rgba(124, 58, 237, 0.25), transparent 60%),
+    radial-gradient(900px 600px at 100% 0%, rgba(79, 70, 229, 0.2), transparent 55%),
+    linear-gradient(160deg, #0f0d15, #1b1a24);
+  color: var(--deposits-text);
+}
+
+.deposits-card {
+  width: min(900px, 100%);
+  padding: 32px 34px 36px;
+  background: var(--deposits-card);
+  border-radius: 28px;
+  border: 1px solid var(--deposits-border);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(16px);
+  display: grid;
+  gap: 16px;
+}
+
+.deposits-card h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.deposits-card h2 {
+  margin: 14px 0 0;
+  font-size: 20px;
+}
+
+.deposits-card h3 {
+  margin: 8px 0 0;
+  font-size: 16px;
+  color: var(--deposits-text);
+}
+
+.deposits-card p {
+  margin: 0;
+  color: var(--deposits-muted);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.deposits-card ul {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+  color: var(--deposits-muted);
+  font-size: 14.5px;
+}
+
+@media (max-width: 600px) {
+  .deposits-card {
+    padding: 26px 22px 28px;
+  }
+
+  .deposits-card h1 {
+    font-size: 24px;
+  }
+}
