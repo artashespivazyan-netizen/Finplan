@@ -12,7 +12,7 @@
 }
 
 .signup-page {
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,6 +32,15 @@
   border: 1px solid var(--card-border);
   box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .signup-header {
@@ -62,23 +71,24 @@
 }
 
 .signup-back {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--text-primary);
+  border: none;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: white;
   padding: 10px 16px;
   border-radius: 14px;
   cursor: pointer;
   font-size: 13px;
-  transition: background 160ms ease, border-color 160ms ease;
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.25);
+  transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
 .signup-back:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 24px rgba(79, 70, 229, 0.35);
 }
 
 .signup-section {
-  margin-top: 26px;
+  margin-top: 0;
 }
 
 .signup-section h2 {
@@ -90,6 +100,15 @@
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.signup-grid--address {
+  grid-template-columns: repeat(2, minmax(200px, 260px));
+  justify-content: flex-start;
+}
+
+.signup-field--compact {
+  max-width: 260px;
 }
 
 .signup-field {
@@ -177,9 +196,23 @@
   accent-color: #8b5cf6;
 }
 
+.signup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.signup-actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
 .signup-primary {
-  margin: 24px auto 0;
-  width: min(320px, 100%);
+  margin: 0 auto;
+  width: 220px;
   height: 42px;
   border-radius: 16px;
   border: none;
